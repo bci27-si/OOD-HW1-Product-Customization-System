@@ -1,8 +1,6 @@
 public class LaptopBuilder implements DeviceInterface{
 
 
-
-
     @Override
     public DeviceInterface setProcessorType() {
 
