@@ -1,47 +1,59 @@
-public class SmartPhoneBuilder extends DeviceInterface {
+public class SmartPhoneBuilder implements DeviceInterface {
 
     /**
      *
      */
     @Override
-    public void setProcessorType() {
+    public DeviceInterface setProcessorType() {
+
+        return this;
 
     }
 
     @Override
-    public void setStorageSize() {
+    public DeviceInterface setStorageSize() {
+
+        return this;
 
     }
 
     @Override
-    public void setScreenSize() {
+    public DeviceInterface setScreenSize() {
 
+        return this;
     }
 
     @Override
-    public void setCameraResolution() {
+    public DeviceInterface setCameraResolution() {
 
+        return this;
     }
     // battery size default setting. (If Statement)
 
     @Override
-    public void setBatterySize() {
-        int batterySize = 0;
-        if (batterySize == 0){
-            System.out.println("How many mAh");
-        }
-    }
+    public DeviceInterface setBatterySize() {
 
-
-    public void setCameraTypes() {
-
-        // transfer from other file here
-
+        return this;
     }
 
     @Override
-    public void setSimType() {
-        super.setSimType();
+    public DeviceInterface setRamAmount(int RamAmount) {
+
+
+        return this;
+    }
+
+
+    public SmartPhoneBuilder setCameraTypes() {
+
+        // transfer from other file here
+        return this;
+    }
+
+
+    public SmartPhoneBuilder setSimType() {
+
+        return this;
 
     }
 

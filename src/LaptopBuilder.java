@@ -1,47 +1,49 @@
 public class LaptopBuilder implements DeviceInterface{
 
-    public LaptopBuilder(){
-
-        this.setCameraResolution();
-        this.setBatterySize();
-
-    }
 
 
 
     @Override
-    public void setProcessorType() {
+    public DeviceInterface setProcessorType() {
+
+        return this;
 
     }
 
     @Override
-    public void setStorageSize() {
+    public DeviceInterface setStorageSize() {
 
+
+        return this;
     }
 
     @Override
-    public void setScreenSize() {
+    public DeviceInterface setScreenSize() {
 
+
+        return this;
     }
 
     @Override
-    public void setCameraResolution() {
+    public DeviceInterface setCameraResolution() {
 
+
+        return this;
     }
 
     @Override
-    public void setBatterySize() {
+    public DeviceInterface setBatterySize() {
         System.out.println("How many mAh");
 
-
+        return this;
     }
 
     @Override
-    public void setRamAmount(int RamAmount) {
+    public DeviceInterface setRamAmount(int RamAmount) {
         System.out.println("set your Ram Amount");
 
         this.RamAmount = RamAmount;
-        return this
+        return this;
         //System.out.println("16Gb of Ram Selected!");
 
     }
