@@ -1,4 +1,13 @@
-public class LaptopBuilder extends DeviceInterface{
+public class LaptopBuilder implements DeviceInterface{
+
+    public LaptopBuilder(){
+
+        this.setCameraResolution();
+        this.setBatterySize();
+
+    }
+
+
 
     @Override
     public void setProcessorType() {
@@ -22,20 +31,28 @@ public class LaptopBuilder extends DeviceInterface{
 
     @Override
     public void setBatterySize() {
+        System.out.println("How many mAh");
+
 
     }
 
     @Override
-    public void setRamAmount() {
-        super.setRamAmount(0);
+    public void setRamAmount(int RamAmount) {
         System.out.println("set your Ram Amount");
 
+        this.RamAmount = RamAmount;
+        return this
+        //System.out.println("16Gb of Ram Selected!");
+
     }
 
-    @Override
+
+
+
+
     public void setGraphicsCard() {
-        super.setGraphicsCard(null);
-        System.out.println("set your GraphicsCard");
+
+        //System.out.println("set your GraphicsCard");
     }
 
 

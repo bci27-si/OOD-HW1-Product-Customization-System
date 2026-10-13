@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Ask Questions/Ask Questions.iml" filepath="$PROJECT_DIR$/Ask Questions/Ask Questions.iml" />
       <module fileurl="file://$PROJECT_DIR$/Product Customization Sys.iml" filepath="$PROJECT_DIR$/Product Customization Sys.iml" />
     </modules>
   </component>

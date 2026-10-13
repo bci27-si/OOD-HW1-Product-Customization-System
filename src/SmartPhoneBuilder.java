@@ -22,16 +22,20 @@ public class SmartPhoneBuilder extends DeviceInterface {
     public void setCameraResolution() {
 
     }
+    // battery size default setting. (If Statement)
 
     @Override
     public void setBatterySize() {
-
+        int batterySize = 0;
+        if (batterySize == 0){
+            System.out.println("How many mAh");
+        }
     }
 
 
-    @Override
     public void setCameraTypes() {
-        super.setCameraTypes();
+
+        // transfer from other file here
 
     }
 
