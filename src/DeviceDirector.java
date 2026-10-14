@@ -15,7 +15,7 @@ public class DeviceDirector {
     public DeviceInterface constructLaptopA(){
 
         return builder
-                .setProcessorType("Intel 9")
+                .setProcessorType("Intel 9th gen 9900K")
                 .setStorageSize(512)
                 .setRamAmount(16)
                 .setScreenSize(17)
@@ -31,7 +31,7 @@ public class DeviceDirector {
     public DeviceInterface constructSmartphone(){
 
         return builder
-                .setProcessorType("Intel 9")
+                .setProcessorType("Arm Snapdgragon 256 bit")
                 .setStorageSize(128)
                 .setRamAmount(8)
                 .setScreenSize(6.5)

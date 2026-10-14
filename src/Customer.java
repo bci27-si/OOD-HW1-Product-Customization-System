@@ -1,4 +1,4 @@
-import com.sun.security.jgss.GSSUtil;
+import java.util.Scanner;
 
 public class Customer {
     public static void main(String[] args) {

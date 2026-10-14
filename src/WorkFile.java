@@ -1,6 +1,8 @@
+import java.io.File;
+
 public interface WorkFile {
     // maybe need to make read return string, as in the csv formattted. later->
-    void ReadCSV();
-    void WriteCSV();
+    void ReadCSV(File CSV);
+    void WriteCSV(File CSV);
 
 }

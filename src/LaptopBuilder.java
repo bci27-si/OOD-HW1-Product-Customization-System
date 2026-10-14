@@ -16,7 +16,6 @@ public class LaptopBuilder implements DeviceInterface {
     private int batterySize;
     private String graphicsCard;
 
-
     @Override
     public DeviceInterface setProcessorType(String processorType) {
         this.processorType = processorType;
@@ -54,7 +53,6 @@ public class LaptopBuilder implements DeviceInterface {
         return this;
     }
 
-
     public LaptopBuilder setGraphicsCard(String graphicsCard) {
         System.out.println("Available Cards: ");
         System.out.println("graphicsCard: " + graphicsCard);
@@ -64,12 +62,11 @@ public class LaptopBuilder implements DeviceInterface {
     }
 //FIXME
     // not sure why This is broken...
+    // i know the device interface doe not support laptop, but i need to consider how to
     public DeviceInterface deviceBuild() {
         System.out.println("Building customised laptop");
-        return new Laptop(processorType, storageSize, ramAmount, screenSize, width, height,batterySize,graphicsCard) {
-        };
+        return DeviceInterface new Laptop(processorType, storageSize, ramAmount, screenSize, width, height,batterySize,graphicsCard);
     }
-
 
     /*
     @Override
@@ -90,8 +87,6 @@ System.out.println("set your Ram Amount");
 //System.out.println("16Gb of Ram Selected!");
 
  */
-
-
 
     // take input but use equals ignore case to prevent case rejection
 
