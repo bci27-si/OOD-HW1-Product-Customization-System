@@ -1,23 +1,24 @@
 public class LaptopBuilder implements DeviceInterface{
-
+/// All methods for Laptop specific building etc
+///
+/// using device interface to "connect eerything so i can return the actual this of the method thereby printing spces
+///
+/// make sure sout doesnt return a memory address ***********
 
     @Override
     public DeviceInterface setProcessorType() {
 
         return this;
-
     }
 
     @Override
     public DeviceInterface setStorageSize() {
-
 
         return this;
     }
 
     @Override
     public DeviceInterface setScreenSize() {
-
 
         return this;
     }
@@ -39,8 +40,8 @@ public class LaptopBuilder implements DeviceInterface{
     @Override
     public DeviceInterface setRamAmount(int RamAmount) {
         System.out.println("set your Ram Amount");
-
-        this.RamAmount = RamAmount;
+        this.ramAmount = RamAmount;
+        //this.RamAmount = RamAmount;
         return this;
         //System.out.println("16Gb of Ram Selected!");
 
