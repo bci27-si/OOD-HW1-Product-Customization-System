@@ -59,7 +59,7 @@ public class SmartPhoneBuilder implements DeviceInterface {
 
     @Override
     public DeviceInterface setBatterySize(int batterySize) {
-        this.size = batterySize;
+        this.batterySize = batterySize;
         return this;
     }
 

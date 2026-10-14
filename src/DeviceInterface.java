@@ -12,8 +12,10 @@ public interface DeviceInterface {
     DeviceInterface setBatterySize(int batterySize);
 
     DeviceInterface setRamAmount(int ramAmount);
-    //String deviceBuild();
 
     DeviceInterface deviceBuild();
+    //String deviceBuild();
+
+    //DeviceInterface deviceBuild();
 
 }

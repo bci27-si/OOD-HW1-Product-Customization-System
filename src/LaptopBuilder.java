@@ -28,7 +28,7 @@ public class LaptopBuilder implements DeviceInterface {
         this.storageSize = storageSize;
         return this;
     }
-
+    // using this to say "this exact piece of data you put in
     @Override
     public DeviceInterface setRamAmount(int RamAmount) {
         this.ramAmount = RamAmount;
@@ -40,7 +40,7 @@ public class LaptopBuilder implements DeviceInterface {
         this.screenSize = screenSize;
         return this;
     }
-
+        // probably will change for proper-ness to --> Select Camera Sensor
     @Override
     public DeviceInterface setCameraResolution(double width, double height) {
         this.width = width;
@@ -55,7 +55,7 @@ public class LaptopBuilder implements DeviceInterface {
     }
 
 
-    public DeviceInterface setGraphicsCard(String graphicsCard) {
+    public LaptopBuilder setGraphicsCard(String graphicsCard) {
         System.out.println("Available Cards: ");
         System.out.println("graphicsCard: " + graphicsCard);
         this.graphicsCard = graphicsCard;

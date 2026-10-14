@@ -15,18 +15,31 @@ public class DeviceDirector {
         return builder
                 .setProcessorType("Intel 9")
                 .setStorageSize(15)
+                .setRamAmount(16)
+                .setScreenSize(17)
+                .setCameraResolution(16,9)
+                .setBatterySize(1200)
+                //.setGraphicsCard()
+
+
                 .deviceBuild();
     }
+    // if i use scanner to allow the user to select parts, i only need two build methods. one for each type of device.
+    // this allows me to have an infinite amount of combinations, with less code.
+
+    public DeviceInterface constructSmartphone(){
+
+        return builder
+                .setProcessorType("Intel 9")
+                .setStorageSize(15)
+                .setRamAmount(16)
+                .setScreenSize(17)
+                .setCameraResolution(16,9)
+                .setBatterySize(1200)
+                //.setGraphicsCard()
 
 
-   public void buildLaptop(){
-
-
-   }
-
-    public void buildSmartphone(){
-
-
+                .deviceBuild();
     }
 
 }
