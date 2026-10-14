@@ -4,18 +4,18 @@ public class DeviceDirector {
     private DeviceInterface builder;
     //private SmartPhoneBuilder builderS;
 
-    public DeviceDirector(DeviceInterface builder) {
+    public DeviceDirector() {
         this.builder = builder;
         //this.builderS = builderS;
 
     }
 
-    public laptop constructLaptopA(){
+    public DeviceInterface constructLaptopA(){
 
         return builder
                 .setProcessorType("Intel 9")
-                .set()
-                .build();
+                .setStorageSize(15)
+                .deviceBuild();
     }
 
 

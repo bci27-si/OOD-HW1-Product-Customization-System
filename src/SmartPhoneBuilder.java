@@ -74,8 +74,8 @@ public class SmartPhoneBuilder implements DeviceInterface {
         return this;
     }
 
-    public DeviceInterface build() {
+    public Smartphone build() {
         System.out.println("Building customised laptop");
-        return new LaptopBuilder (processorType,storageSize,ramAmount,screenSize,width,height);
+        return new Smartphone (processorType,storageSize,ramAmount,screenSize,width,height,batterySize,cameraType,simType);
     }
 }

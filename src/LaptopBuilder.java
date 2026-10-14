@@ -14,37 +14,43 @@ public class LaptopBuilder implements DeviceInterface {
     private double height;
     //
     private int batterySize;
-    private String cameraType;
-    private String simType;
+    private String graphicsCard;
 
 
     @Override
     public DeviceInterface setProcessorType(String processorType) {
+        this.processorType = processorType;
         return this;
     }
 
     @Override
     public DeviceInterface setStorageSize(int storageSize) {
+        this.storageSize = storageSize;
         return this;
     }
 
     @Override
     public DeviceInterface setRamAmount(int RamAmount) {
+        this.ramAmount = RamAmount;
         return this;
     }
 
     @Override
     public DeviceInterface setScreenSize(double screenSize) {
+        this.screenSize = screenSize;
         return this;
     }
 
     @Override
     public DeviceInterface setCameraResolution(double width, double height) {
+        this.width = width;
+        this.height = height;
         return this;
     }
 
     @Override
     public DeviceInterface setBatterySize(int batterySize) {
+        this.batterySize = batterySize;
         return this;
     }
 
@@ -52,13 +58,16 @@ public class LaptopBuilder implements DeviceInterface {
     public DeviceInterface setGraphicsCard(String graphicsCard) {
         System.out.println("Available Cards: ");
         System.out.println("graphicsCard: " + graphicsCard);
+        this.graphicsCard = graphicsCard;
 
         return this;
     }
-
+//FIXME
+    // not sure why This is broken...
     public DeviceInterface deviceBuild() {
         System.out.println("Building customised laptop");
-        return new LaptopBuilder (processorType,storageSize,ramAmount,screenSize,width,height);
+        return new Laptop(processorType, storageSize, ramAmount, screenSize, width, height,batterySize,graphicsCard) {
+        };
     }
 
 
