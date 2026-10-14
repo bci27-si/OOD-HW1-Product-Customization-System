@@ -6,6 +6,10 @@ public class Smartphone {
     public void buildSmartphoneA(){
 
 
+
+
+
+
     }
 
     public void buildSmartphoneB(){
