@@ -21,7 +21,7 @@ public class SmartPhoneBuilder implements DeviceInterface {
      * Specific methods here are set sim type and set camera type
      *
      */
-    @Override
+    @Override           // Mobile devices usually have an arm based chip, like the newer 256 snapdragons
     public DeviceInterface setProcessorType(String processorType) {
         this.processorType = processorType;
         return this; // amd or intel ONLY Bry-ccelerators not ready yet.

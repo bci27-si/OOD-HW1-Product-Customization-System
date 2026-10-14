@@ -56,7 +56,7 @@ public class LaptopBuilder implements DeviceInterface {
         return this;
     }
 
-    public DeviceInterface build() {
+    public DeviceInterface deviceBuild() {
         System.out.println("Building customised laptop");
         return new LaptopBuilder (processorType,storageSize,ramAmount,screenSize,width,height);
     }

@@ -5,6 +5,7 @@ public class Laptop{
     public void buildLaptopA(){
 
 
+
     }
 
     public void buildLaptopB(){
