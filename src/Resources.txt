@@ -1,0 +1,2 @@
+Used Slides to look at builder pattern,Adapter, astract factory, factory and checked previous builder pattern for pizza and car.
+went to Jose to ask for some help since i was confused, eventually figured it out with his help. he checked my existing umls, guided me to fix small errors 
