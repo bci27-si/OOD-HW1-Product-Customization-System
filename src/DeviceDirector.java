@@ -9,18 +9,19 @@ public class DeviceDirector {
         //this.builderS = builderS;
 
     }
+    // setting preset aparts that are available
+    //      would limit the user and allow for the most customiseable devices within bounds.
 
     public DeviceInterface constructLaptopA(){
 
         return builder
                 .setProcessorType("Intel 9")
-                .setStorageSize(15)
+                .setStorageSize(512)
                 .setRamAmount(16)
                 .setScreenSize(17)
                 .setCameraResolution(16,9)
                 .setBatterySize(1200)
                 //.setGraphicsCard()
-
 
                 .deviceBuild();
     }
@@ -31,13 +32,12 @@ public class DeviceDirector {
 
         return builder
                 .setProcessorType("Intel 9")
-                .setStorageSize(15)
-                .setRamAmount(16)
-                .setScreenSize(17)
+                .setStorageSize(128)
+                .setRamAmount(8)
+                .setScreenSize(6.5)
                 .setCameraResolution(16,9)
-                .setBatterySize(1200)
+                .setBatterySize(7000)
                 //.setGraphicsCard()
-
 
                 .deviceBuild();
     }
