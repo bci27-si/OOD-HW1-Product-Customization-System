@@ -2,12 +2,14 @@ import java.io.*;
 
 public class CSVFile implements WorkFile {
 
+    String Name; // for now
+
     //could do better, but lets see
 
     //read or write?
     private int methodChecker = 3;
 
-
+    // name of vsv gas to be sotred somewhere
 
     public void generateCSV(String fileName) throws IOException {
         // just creates the file with a name.
@@ -18,7 +20,7 @@ public class CSVFile implements WorkFile {
             ReadCSV(File fileName);
         }
         else if (methodChecker == 1){
-            WriteCSV(File fileName);
+            WriteCSV(File fileName);//FIXME
         }
         else{
             System.out.println("Ouch");
@@ -36,7 +38,7 @@ public class CSVFile implements WorkFile {
     public void ReadCSV(File CSV) {
         methodChecker = 0;
         // output csv with 'n in each line ending and "   " three saces for cluumns
-        if(checkFile() == true){
+        if(checkFile(CSV)){
 
         }
         else {
@@ -54,7 +56,7 @@ public class CSVFile implements WorkFile {
         }
         catch (FileNotFoundException e){
 
-            generateCSV();
+            generateCSV(String Name);
             // add loop somewhere else, i can't have wiired loops everythnwer in functions. function shoud try again
             // no return just in case other problems were to arise
         }
@@ -70,6 +72,7 @@ public class CSVFile implements WorkFile {
             System.out.println("Not sure whats wrong");;
         }*/
 
+        return false;
     }
 
 
@@ -77,7 +80,7 @@ public class CSVFile implements WorkFile {
     public void WriteCSV(File CSV) {
         methodChecker = 1;
 
-        if(checkFile(CSV) == true){
+        if(checkFile(CSV)){
 
         }
 

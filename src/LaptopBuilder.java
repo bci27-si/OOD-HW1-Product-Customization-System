@@ -65,7 +65,8 @@ public class LaptopBuilder implements DeviceInterface {
     // i know the device interface doe not support laptop, but i need to consider how to
     public DeviceInterface deviceBuild() {
         System.out.println("Building customised laptop");
-        return DeviceInterface new Laptop(processorType, storageSize, ramAmount, screenSize, width, height,batterySize,graphicsCard);
+        return DeviceInterface new Laptop(processorType, storageSize,
+                ramAmount, screenSize, width, height,batterySize,graphicsCard);
     }
 
     /*
