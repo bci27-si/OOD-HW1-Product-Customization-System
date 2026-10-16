@@ -74,6 +74,12 @@ public class SmartPhoneBuilder implements DeviceInterface {
         return this;
     }
 
+    @Override
+    public DeviceInterface deviceBuild() {
+        return null;
+    }
+
+    // not sure which one is better... toString or this
     public Smartphone build() {
         System.out.println("Building customised laptop");
         return new Smartphone (processorType,storageSize,ramAmount,screenSize,width,height,batterySize,cameraType,simType);

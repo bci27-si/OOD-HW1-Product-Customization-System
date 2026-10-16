@@ -26,7 +26,7 @@ public class Smartphone {
         this.simType = simType;
     }
 
-
+// to string instead of returning everything
     @Override
     public String toString() {
         return "Smartphone{" +

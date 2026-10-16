@@ -3,6 +3,8 @@ import java.util.Scanner;
 public class Customer {
     public static void main(String[] args) {
 
+        Scanner scnr = new Scanner(System.in);
+
         System.out.println("|============================|");
         System.out.println("|     Welcome to NewEgg!     |");
         System.out.println("|============================|");
@@ -19,18 +21,33 @@ public class Customer {
         while (true) {
 
             System.out.println("Select the Processor Type: ");
+            String ProcessorType = scnr.nextLine();
 
             System.out.println("Select Storage Size: ");
+            String StorageSize = scnr.nextLine();
 
             System.out.println("Select a Ram Amount: ");
+            String RamAmount = scnr.nextLine();
 
-            System.out.println("Select a Screen Size : ");
+            System.out.println("Select a Screen Size : \n width");
+            String ScreenWidth = scnr.nextLine();
+
+            System.out.println("Height");
+            String ScreenHeight = scnr.nextLine();
 
             System.out.println("Select a Camera Resolution Height: ");
+            String CameraResolutionHeight = scnr.nextLine();
 
             System.out.println("Select a Camera Resolution Width: ");
+            String CameraResolutionWidth = scnr.nextLine();
 
             System.out.println("Select a Battery Size: ");
+            String BatterySize = scnr.nextLine();
+
+        }
+
+
+
 
             // ask if they want another device.
             // Y or yes
@@ -41,7 +58,10 @@ public class Customer {
             */
 
 
-        }
+
+
+
+
 
     }
 }

@@ -5,4 +5,5 @@ public interface WorkFile {
     void ReadCSV(File CSV);
     void WriteCSV(File CSV);
 
+    void ReadCSV(File CSV);
 }

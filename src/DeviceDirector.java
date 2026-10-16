@@ -12,6 +12,9 @@ public class DeviceDirector {
     // setting preset aparts that are available
     //      would limit the user and allow for the most customiseable devices within bounds.
 
+    //take inputs from scanner in main, but have default values--> will add
+
+
     public DeviceInterface constructLaptopA(){
 
         return builder
@@ -25,7 +28,8 @@ public class DeviceDirector {
 
                 .deviceBuild();
     }
-    // if i use scanner to allow the user to select parts, i only need two build methods. one for each type of device.
+    // if i use scanner to allow the user to select parts, i only need two build methods.
+    // one for each type of device.
     // this allows me to have an infinite amount of combinations, with less code.
 
     public DeviceInterface constructSmartphone(){
