@@ -11,14 +11,28 @@ public class Customer {
 
 
         // specific to device
-        DeviceInterface builderL = new LaptopBuilder();
-        DeviceInterface builderS = new SmartPhoneBuilder();
-        DeviceDirector DeviceDirector = new DeviceDirector();
+        //DeviceInterface builderL = new LaptopBuilder();
+        //DeviceInterface builderS = new SmartPhoneBuilder();
+        DeviceDirector device = new DeviceDirector();
+        System.out.println("--- Default Laptop ---");
+        //builderL.deviceBuild();
+        device.constructLaptopA();
 
-        System.out.println("   -----Select a Device: -----   " +
-                "\n      Laptop \n           or \n      Smartphone");
+        System.out.println("--- Default Smartphone ---");
+        device.constructSmartphone();
 
+        device.
+
+        //builderS.deviceBuild();
+
+/*
         while (true) {
+
+            System.out.println("   -----Select a Device: -----   " +
+                    "\n      Laptop \n           or \n      Smartphone");
+            System.out.println("Choose default setup? ");
+            if (scnr.hasNextLine()) {}
+
 
             System.out.println("Select the Processor Type: ");
             String ProcessorType = scnr.nextLine();
@@ -45,8 +59,7 @@ public class Customer {
             String BatterySize = scnr.nextLine();
 
         }
-
-
+*/
 
 
             // ask if they want another device.

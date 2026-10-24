@@ -16,7 +16,7 @@ public class SmartPhoneBuilder implements DeviceInterface {
 
 
     /**
-     * Builder methods here FOr a customied spmartphone.
+     * Builder methods here FOr a customized smartphone.
      *
      * Specific methods here are set sim type and set camera type
      *
@@ -70,18 +70,25 @@ public class SmartPhoneBuilder implements DeviceInterface {
     }
 
     public SmartPhoneBuilder setSimType(String simType) {
-        this.simType = simType;
+        this.simType = simType;// sim or esim
         return this;
     }
 
     @Override
     public DeviceInterface deviceBuild() {
+        return new SmartPhoneBuilder (processorType, storageSize, ramAmount, screenSize, width, height, batterySize, cameraType, simType);
+    }
+
+    @Override
+    public DeviceInterface setGraphicsCard(String graphicsCard) {
         return null;
     }
 
     // not sure which one is better... toString or this
+    /*
     public Smartphone build() {
         System.out.println("Building customised laptop");
         return new Smartphone (processorType,storageSize,ramAmount,screenSize,width,height,batterySize,cameraType,simType);
     }
+    */
 }

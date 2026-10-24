@@ -10,7 +10,7 @@ public class DeviceDirector {
 
     }
     // setting preset aparts that are available
-    //      would limit the user and allow for the most customiseable devices within bounds.
+    //      would limit the user and allow for the most customizable devices within bounds.
 
     //take inputs from scanner in main, but have default values--> will add
 
@@ -24,7 +24,7 @@ public class DeviceDirector {
                 .setScreenSize(17)
                 .setCameraResolution(16,9)
                 .setBatterySize(1200)
-                //.setGraphicsCard()
+                .setGraphicsCard("Intel B70m 32Gb")
 
                 .deviceBuild();
     }
@@ -41,6 +41,7 @@ public class DeviceDirector {
                 .setScreenSize(6.5)
                 .setCameraResolution(16,9)
                 .setBatterySize(7000)
+                .setSimType("E-Sim")
                 //.setGraphicsCard()
 
                 .deviceBuild();

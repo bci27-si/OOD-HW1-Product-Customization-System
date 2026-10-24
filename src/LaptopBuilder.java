@@ -1,10 +1,10 @@
 public class LaptopBuilder implements DeviceInterface {
     /// All methods for Laptop specific building etc
     ///
-    /// using device interface to "connect eerything so i can return the actual this of the method thereby printing spces
+    /// using device interface to "connect everything so i can return the actual this of the method thereby printing spces
     ///
-    /// make sure sout doesnt return a memory address ***********
-
+    /// make sure sout doesn't return a memory address ***********
+// i flipped laptop builder with laptop. thats the confusion...
     private String processorType;
     private int storageSize;
     private int ramAmount;
@@ -60,15 +60,40 @@ public class LaptopBuilder implements DeviceInterface {
 
         return this;
     }
-//FIXME
-    // not sure why This is broken...
-    // i know the device interface doe not support laptop, but i need to consider how to
-    public DeviceInterface deviceBuild() {
-        System.out.println("Building customised laptop");
-        return DeviceInterface new Laptop(processorType, storageSize,
-                ramAmount, screenSize, width, height,batterySize,graphicsCard);
+// unused... though a laptop maybe... could have a sim
+    @Override
+    public DeviceInterface setSimType(String simType) {
+        return null;
     }
 
+    //FIXME
+    // not sure why This is broken...
+    // i know the device interface doe not support laptop, but i need to consider how to
+    /*
+    public DeviceInterface deviceBuild() {
+        System.out.println("Building customised laptop");
+        return processorType, storageSize, ramAmount, screenSize, width, height,batterySize,graphicsCard;
+    }*/
+
+    @Override
+    public DeviceInterface deviceBuild() {
+        System.out.println("not sure what broke here... types are messed up");
+        return null;
+    }
+
+    @Override
+    public String toString() {
+        return "LaptopBuilder{" +
+                "processorType='" + processorType + '\'' +
+                ", storageSize=" + storageSize +
+                ", ramAmount=" + ramAmount +
+                ", screenSize=" + screenSize +
+                ", width=" + width +
+                ", height=" + height +
+                ", batterySize=" + batterySize +
+                ", graphicsCard='" + graphicsCard + '\'' +
+                '}';
+    }
     /*
     @Override
     public String toString() {

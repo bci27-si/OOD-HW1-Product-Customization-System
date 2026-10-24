@@ -16,6 +16,11 @@ public interface DeviceInterface {
     DeviceInterface deviceBuild();
     //String deviceBuild();
 
+    // for the purposes of differentiation i have to put these methods that are specific to each device in.
+    DeviceInterface setGraphicsCard(String graphicsCard);
+
+    DeviceInterface setSimType(String simType);
+
     //DeviceInterface deviceBuild();
 
 }
