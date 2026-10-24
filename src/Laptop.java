@@ -1,4 +1,4 @@
-public class Laptop {
+public class Laptop implements Product {
 
     private String processorType;
     private int storageSize;
@@ -9,7 +9,8 @@ public class Laptop {
     private double height;
     //
     private int batterySize;
-    private String graphicsCard;;
+    private String graphicsCard;
+    ;
 
     public Laptop(String processorType, int storageSize, int ramAmount, double screenSize, double width, double height, int batterySize, String graphicsCard) {
         this.processorType = processorType;
@@ -21,6 +22,7 @@ public class Laptop {
         this.batterySize = batterySize;
         this.graphicsCard = graphicsCard;
     }
+
 
     @Override
     public String toString() {

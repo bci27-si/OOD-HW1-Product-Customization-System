@@ -1,7 +1,7 @@
 public class DeviceDirector {
     // this class builds the object and fills out the created CSV
 
-    private DeviceInterface builder;
+    private DeviceBuilder builder;
     //private SmartPhoneBuilder builderS;
 
     public DeviceDirector() {
@@ -15,7 +15,7 @@ public class DeviceDirector {
     //take inputs from scanner in main, but have default values--> will add
 
 
-    public DeviceInterface constructLaptopA(){
+    public DeviceBuilder constructLaptopA(){
 
         return builder
                 .setProcessorType("Intel 9th gen 9900K")
@@ -32,7 +32,7 @@ public class DeviceDirector {
     // one for each type of device.
     // this allows me to have an infinite amount of combinations, with less code.
 
-    public DeviceInterface constructSmartphone(){
+    public DeviceBuilder constructSmartphone(){
 
         return builder
                 .setProcessorType("Arm Snapdgragon 256 bit")

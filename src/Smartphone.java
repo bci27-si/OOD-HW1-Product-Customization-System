@@ -1,4 +1,4 @@
-public class Smartphone {
+public class Smartphone implements Product {
 
     // build the smartphone with the specs you want using methods
 
@@ -25,6 +25,7 @@ public class Smartphone {
         this.cameraType = cameraType;
         this.simType = simType;
     }
+
 
     // on second thought... this i sprobably where i shoud have setup the write to csv...
 // to string instead of returning everything

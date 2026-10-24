@@ -1,4 +1,4 @@
-public class LaptopBuilder implements DeviceInterface {
+public class LaptopBuilder implements DeviceBuilder<Laptop> {
     /// All methods for Laptop specific building etc
     ///
     /// using device interface to "connect everything so i can return the actual this of the method thereby printing spces
@@ -17,38 +17,38 @@ public class LaptopBuilder implements DeviceInterface {
     private String graphicsCard;
 
     @Override
-    public DeviceInterface setProcessorType(String processorType) {
+    public DeviceBuilder<Laptop> setProcessorType(String processorType) {
         this.processorType = processorType;
         return this;
     }
 
     @Override
-    public DeviceInterface setStorageSize(int storageSize) {
+    public DeviceBuilder<Laptop> setStorageSize(int storageSize) {
         this.storageSize = storageSize;
         return this;
     }
     // using this to say "this exact piece of data you put in
     @Override
-    public DeviceInterface setRamAmount(int RamAmount) {
+    public DeviceBuilder<Laptop> setRamAmount(int RamAmount) {
         this.ramAmount = RamAmount;
         return this;
     }
 
     @Override
-    public DeviceInterface setScreenSize(double screenSize) {
+    public DeviceBuilder<Laptop> setScreenSize(double screenSize) {
         this.screenSize = screenSize;
         return this;
     }
         // probably will change for proper-ness to --> Select Camera Sensor
     @Override
-    public DeviceInterface setCameraResolution(double width, double height) {
+    public DeviceBuilder<Laptop> setCameraResolution(double width, double height) {
         this.width = width;
         this.height = height;
         return this;
     }
 
     @Override
-    public DeviceInterface setBatterySize(int batterySize) {
+    public DeviceBuilder<Laptop> setBatterySize(int batterySize) {
         this.batterySize = batterySize;
         return this;
     }
@@ -60,9 +60,16 @@ public class LaptopBuilder implements DeviceInterface {
 
         return this;
     }
-// unused... though a laptop maybe... could have a sim
+
+    // unused etc.. wanted to
     @Override
-    public DeviceInterface setSimType(String simType) {
+    public DeviceBuilder<Laptop> setCameraType(String cameraType) {
+        return null;
+    }
+
+    // unused... though a laptop maybe... could have a sim
+    @Override
+    public DeviceBuilder<Laptop> setSimType(String simType) {
         return null;
     }
 
@@ -76,24 +83,11 @@ public class LaptopBuilder implements DeviceInterface {
     }*/
 
     @Override
-    public DeviceInterface deviceBuild() {
-        System.out.println("not sure what broke here... types are messed up");
-        return null;
+    public Laptop deviceBuild() {
+        //System.out.println("not sure what broke here... types are messed up");
+        return new Laptop( processorType, storageSize, ramAmount, screenSize, width, height, batterySize, graphicsCard);
     }
 
-    @Override
-    public String toString() {
-        return "LaptopBuilder{" +
-                "processorType='" + processorType + '\'' +
-                ", storageSize=" + storageSize +
-                ", ramAmount=" + ramAmount +
-                ", screenSize=" + screenSize +
-                ", width=" + width +
-                ", height=" + height +
-                ", batterySize=" + batterySize +
-                ", graphicsCard='" + graphicsCard + '\'' +
-                '}';
-    }
     /*
     @Override
     public String toString() {

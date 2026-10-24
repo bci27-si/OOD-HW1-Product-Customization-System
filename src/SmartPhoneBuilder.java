@@ -1,4 +1,4 @@
-public class SmartPhoneBuilder implements DeviceInterface {
+public class SmartPhoneBuilder implements DeviceBuilder<Smartphone> {
 
     private String processorType;
     private int storageSize;
@@ -17,40 +17,40 @@ public class SmartPhoneBuilder implements DeviceInterface {
 
     /**
      * Builder methods here FOr a customized smartphone.
-     *
+     * <p>
      * Specific methods here are set sim type and set camera type
      *
      */
     @Override           // Mobile devices usually have an arm based chip, like the newer 256 snapdragons
-    public DeviceInterface setProcessorType(String processorType) {
+    public DeviceBuilder<Smartphone> setProcessorType(String processorType) {
         this.processorType = processorType;
         return this; // amd or intel ONLY Bry-ccelerators not ready yet.
     }
     // mobile phones commonly have snapdragon, (ARM Based microprocessors)
 
     @Override
-    public DeviceInterface setStorageSize(int storageSize) {
+    public DeviceBuilder<Smartphone> setStorageSize(int storageSize) {
         this.storageSize = storageSize;
         return this;
     }
     // some multiple of 8
 
     @Override
-    public DeviceInterface setRamAmount(int ramAmount) {
+    public DeviceBuilder<Smartphone> setRamAmount(int ramAmount) {
         this.ramAmount = ramAmount;
         return this;
     }
 
     // screen size is actually measured from one corner to the other corner. fixes naming for width height.
     @Override
-    public DeviceInterface setScreenSize(double screenSize) {
+    public DeviceBuilder<Smartphone> setScreenSize(double screenSize) {
         this.screenSize = screenSize;
         return this;
     }
 
     // hopefully w x h won't be a problem
     @Override
-    public DeviceInterface setCameraResolution(double width, double height){
+    public DeviceBuilder<Smartphone> setCameraResolution(double width, double height){
         this.width = width;
         this.height = height;
         return this;
@@ -58,36 +58,31 @@ public class SmartPhoneBuilder implements DeviceInterface {
     // battery size default setting. (If Statement)
 
     @Override
-    public DeviceInterface setBatterySize(int batterySize){
+    public DeviceBuilder<Smartphone> setBatterySize(int batterySize){
         this.batterySize = batterySize;
         return this;
     }
     @Override
-    public DeviceInterface setCameraType(String cameraType){
+    public DeviceBuilder<Smartphone> setCameraType(String cameraType){
         this.cameraType = cameraType;
         // transfer from other file here
         return this;
     }
     @Override
-    public DeviceInterface setSimType(String simType){
+    public DeviceBuilder<Smartphone> setSimType(String simType){
         this.simType = simType;// sim or esim
         return this;
     }
-    @Override
-    public void fina
 
     @Override
-    public DeviceInterface deviceBuild(){
-        components[] = (processorType, storageSize, ramAmount, screenSize, width, height, batterySize, cameraType, simType);
-        Smartphone s;
-        System.out.println(s);// worry about this later
-
-        return csvFile.writeFile(for(int i; i < components.length));
-
+    public Smartphone deviceBuild(){
+        //components[] = (processorType, storageSize, ramAmount, screenSize, width, height, batterySize, cameraType, simType);
+        return new Smartphone( processorType, storageSize, ramAmount, screenSize, width, height, batterySize, cameraType, simType);
     }
 
+
     @Override
-    public DeviceInterface setGraphicsCard(String graphicsCard) {
+    public DeviceBuilder<Smartphone> setGraphicsCard(String graphicsCard) {
         return null;
     }
 
