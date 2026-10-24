@@ -1,5 +1,3 @@
-import javax.crypto.spec.PSource;
-
 public class SmartPhoneBuilder implements DeviceInterface {
 
     private String processorType;
@@ -13,6 +11,8 @@ public class SmartPhoneBuilder implements DeviceInterface {
     private int batterySize;
     private String cameraType;
     private String simType;
+
+    private CSVFile csvFile;
 
 
     /**
@@ -50,7 +50,7 @@ public class SmartPhoneBuilder implements DeviceInterface {
 
     // hopefully w x h won't be a problem
     @Override
-    public DeviceInterface setCameraResolution(double width, double height) {
+    public DeviceInterface setCameraResolution(double width, double height){
         this.width = width;
         this.height = height;
         return this;
@@ -58,25 +58,32 @@ public class SmartPhoneBuilder implements DeviceInterface {
     // battery size default setting. (If Statement)
 
     @Override
-    public DeviceInterface setBatterySize(int batterySize) {
+    public DeviceInterface setBatterySize(int batterySize){
         this.batterySize = batterySize;
         return this;
     }
-
-    public SmartPhoneBuilder setCameraType(String cameraType) {
+    @Override
+    public DeviceInterface setCameraType(String cameraType){
         this.cameraType = cameraType;
         // transfer from other file here
         return this;
     }
-
-    public SmartPhoneBuilder setSimType(String simType) {
+    @Override
+    public DeviceInterface setSimType(String simType){
         this.simType = simType;// sim or esim
         return this;
     }
+    @Override
+    public void fina
 
     @Override
-    public DeviceInterface deviceBuild() {
-        return new SmartPhoneBuilder (processorType, storageSize, ramAmount, screenSize, width, height, batterySize, cameraType, simType);
+    public DeviceInterface deviceBuild(){
+        components[] = (processorType, storageSize, ramAmount, screenSize, width, height, batterySize, cameraType, simType);
+        Smartphone s;
+        System.out.println(s);// worry about this later
+
+        return csvFile.writeFile(for(int i; i < components.length));
+
     }
 
     @Override

@@ -9,10 +9,6 @@ public class Customer {
         System.out.println("|     Welcome to NewEgg!     |");
         System.out.println("|============================|");
 
-
-        // specific to device
-        //DeviceInterface builderL = new LaptopBuilder();
-        //DeviceInterface builderS = new SmartPhoneBuilder();
         DeviceDirector device = new DeviceDirector();
         System.out.println("--- Default Laptop ---");
         //builderL.deviceBuild();
@@ -21,7 +17,8 @@ public class Customer {
         System.out.println("--- Default Smartphone ---");
         device.constructSmartphone();
 
-        device.
+        // adding the write file to return AND print the data to CSV
+        //writeFile();
 
         //builderS.deviceBuild();
 
@@ -32,7 +29,6 @@ public class Customer {
                     "\n      Laptop \n           or \n      Smartphone");
             System.out.println("Choose default setup? ");
             if (scnr.hasNextLine()) {}
-
 
             System.out.println("Select the Processor Type: ");
             String ProcessorType = scnr.nextLine();
@@ -60,8 +56,6 @@ public class Customer {
 
         }
 */
-
-
             // ask if they want another device.
             // Y or yes
             /*
@@ -69,12 +63,5 @@ public class Customer {
                 break;
             }
             */
-
-
-
-
-
-
-
     }
 }

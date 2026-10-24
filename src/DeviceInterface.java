@@ -1,5 +1,7 @@
 public interface DeviceInterface {
 
+    //DeviceInterface[] components = new DeviceInterface[10];
+
     DeviceInterface setProcessorType(String processorType);
 
     DeviceInterface setStorageSize(int storageSize);
@@ -13,11 +15,16 @@ public interface DeviceInterface {
 
     DeviceInterface setRamAmount(int ramAmount);
 
+    DeviceInterface finalizeComponents();
+
     DeviceInterface deviceBuild();
+            //DeviceInterface[] components = new DeviceInterface[10];
     //String deviceBuild();
 
     // for the purposes of differentiation i have to put these methods that are specific to each device in.
     DeviceInterface setGraphicsCard(String graphicsCard);
+
+    DeviceInterface setCameraType(String cameraType);
 
     DeviceInterface setSimType(String simType);
 

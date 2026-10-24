@@ -26,6 +26,7 @@ public class Smartphone {
         this.simType = simType;
     }
 
+    // on second thought... this i sprobably where i shoud have setup the write to csv...
 // to string instead of returning everything
     @Override
     public String toString() {
