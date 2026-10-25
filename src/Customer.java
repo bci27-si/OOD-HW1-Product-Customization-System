@@ -6,16 +6,20 @@ public class Customer {
         Scanner scnr = new Scanner(System.in);
 
         System.out.println("|============================|");
-        System.out.println("|     Welcome to NewEgg!     |");
+        System.out.println("|     Welcome to NewEgg!     |"); // Essentially a MicroCenter
         System.out.println("|============================|");
 
         DeviceDirector device = new DeviceDirector();
         System.out.println("--- Default Laptop ---");
         //builderL.deviceBuild();
         device.constructLaptopA();
+        device.toString();
+
+
 
         System.out.println("--- Default Smartphone ---");
         device.constructSmartphone();
+        device.toString(); // print out all components with corresponding names
 
         // adding the write file to return AND print the data to CSV
         //writeFile();

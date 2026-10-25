@@ -1,4 +1,6 @@
-public class Smartphone implements Product {
+/// Clacc Laptop.java contains toStriing() method for displaying Components in the laptop
+///and constructor for a laptop product.
+public class Smartphone implements GenericProduct {
 
     // build the smartphone with the specs you want using methods
 

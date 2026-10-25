@@ -1,4 +1,6 @@
-public class Laptop implements Product {
+/// Class Laptop.java contains toStriing() method for displaying Components in the laptop
+///and constructor for a laptop product.
+public class Laptop implements GenericProduct {
 
     private String processorType;
     private int storageSize;

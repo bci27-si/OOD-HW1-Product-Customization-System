@@ -1,5 +1,4 @@
 public interface DeviceBuilder<T extends GenericProduct> {
-    //DeviceInterface[] components = new DeviceInterface[10];
 
     DeviceBuilder<T> setProcessorType(String processorType);
 

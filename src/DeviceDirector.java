@@ -1,12 +1,13 @@
 public class DeviceDirector {
     // this class builds the object and fills out the created CSV
 
-    private DeviceBuilder builder;
+    private DeviceBuilder<Laptop> builder;  // TYPE ERROR FIXME how do i do this...
+    private DeviceBuilder<Smartphone> builder2; // lazy fix
     //private SmartPhoneBuilder builderS;
 
     public DeviceDirector() {
         this.builder = builder;
-        //this.builderS = builderS;
+        this.builder2 = builder2;
 
     }
     // setting preset aparts that are available
@@ -15,7 +16,7 @@ public class DeviceDirector {
     //take inputs from scanner in main, but have default values--> will add
 
 
-    public DeviceBuilder constructLaptopA(){
+    public Laptop constructLaptopA(){
 
         return builder
                 .setProcessorType("Intel 9th gen 9900K")
@@ -32,9 +33,9 @@ public class DeviceDirector {
     // one for each type of device.
     // this allows me to have an infinite amount of combinations, with less code.
 
-    public DeviceBuilder constructSmartphone(){
+    public Smartphone constructSmartphone(){
 
-        return builder
+        return (Smartphone) builder2
                 .setProcessorType("Arm Snapdgragon 256 bit")
                 .setStorageSize(128)
                 .setRamAmount(8)
