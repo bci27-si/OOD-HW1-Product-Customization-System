@@ -10,7 +10,7 @@ public class Customer {
         System.out.println("|     Welcome to NewEgg!     |"); // Essentially a MicroCenter
         System.out.println("|============================|");
 
-        CSVFile file = new CSVFile("Sales");
+        CSVFile file = new CSVFile();
         // create the file object
 
         DeviceDirector device = new DeviceDirector();

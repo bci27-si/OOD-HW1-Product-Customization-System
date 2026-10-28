@@ -8,13 +8,13 @@ public class CSVFile implements WorkFile{
     private String fileName;
     File file = new File(fileName);
 
-    public CSVFile(String fileName) {
+    public CSVFile() {
         this.fileName = fileName + ".csv";
     }
 
     @Override
     public void checkFile() {
-        //File file = new File(fileName);
+        File file = new File(fileName);
 
         if (!file.exists()) {
             try {
