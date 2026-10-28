@@ -45,12 +45,16 @@ public class CSVFile implements WorkFile{
         // write each piece of new data to a column as i listed above when creating the file.
         checkFile();
         try(BufferedWriter bw = new BufferedWriter(new FileWriter(fileName, true))){
-            bw.write(String.join(",", columns));
-            bw.newLine();
+            bw.write(String.join(",", columns));// pass in toString ?
+            bw.newLine(); // next row
 
         }
         catch (IOException e) {
             System.out.println("CSV Error: " + e.getMessage() + "Method: newRow();");
+        }
+
+        catch (Exception e) {
+            System.out.println(e.getMessage());
         }
     }
 
@@ -67,7 +71,7 @@ public class CSVFile implements WorkFile{
             String line;
             while((line = br.readLine())!= null){
                 System.out.println(line);
-                String[] columns =  line.split(",");
+                String[] columns =  line.split(","); // perfect, alreay done. pass in toString ?
                 // array for columns /\
                 System.out.println(Arrays.toString(columns));
             }

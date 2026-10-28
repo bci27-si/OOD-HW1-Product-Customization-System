@@ -4,22 +4,31 @@ public class Customer {
     public static void main(String[] args) {
 
         Scanner scnr = new Scanner(System.in);
+        //CSVFile csvFile = new CSVFile("Customer.csv");
 
         System.out.println("|============================|");
         System.out.println("|     Welcome to NewEgg!     |"); // Essentially a MicroCenter
         System.out.println("|============================|");
 
+        CSVFile file = new CSVFile("Sales");
+        // create the file object
+
         DeviceDirector device = new DeviceDirector();
         System.out.println("--- Default Laptop ---");
         //builderL.deviceBuild();
-        device.constructLaptopA();
-        device.toString();
-
-
+        //device.constructLaptopA();
+        //device.toString();
+        file.writeFile(device.constructLaptopA().toString());
+        //file.readAll();
 
         System.out.println("--- Default Smartphone ---");
         device.constructSmartphone();
-        device.toString(); // print out all components with corresponding names
+
+        file.writeFile(device.constructSmartphone().toString());
+        // print out all components with corresponding names
+
+        // printout everything in the file
+        file.readAll();
 
         // adding the write file to return AND print the data to CSV
         //writeFile();

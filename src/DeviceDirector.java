@@ -1,13 +1,13 @@
 public class DeviceDirector {
     // this class builds the object and fills out the created CSV
 
-    private DeviceBuilder<Laptop> builder;  // TYPE ERROR FIXME how do i do this...
-    private DeviceBuilder<Smartphone> builder2; // lazy fix
+    private DeviceBuilder<Laptop, ?> builder;  // TYPE ERROR FIXME how do i do this...
+    private DeviceBuilder<Smartphone, ?> builder2; // lazy fix
     //private SmartPhoneBuilder builderS;
 
     public DeviceDirector() {
-        this.builder = builder;
-        this.builder2 = builder2;
+        this.builder = new LaptopBuilder();
+        this.builder2 = new SmartPhoneBuilder();
 
     }
     // setting preset aparts that are available
@@ -35,7 +35,7 @@ public class DeviceDirector {
 
     public Smartphone constructSmartphone(){
 
-        return (Smartphone) builder2
+        return builder2
                 .setProcessorType("Arm Snapdgragon 256 bit")
                 .setStorageSize(128)
                 .setRamAmount(8)

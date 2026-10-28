@@ -1,8 +1,8 @@
-/// Clacc Laptop.java contains toStriing() method for displaying Components in the laptop
+/// Class Laptop.java contains toStriing() method for displaying Components in the laptop
 ///and constructor for a laptop product.
 public class Smartphone implements GenericProduct {
 
-    // build the smartphone with the specs you want using methods
+    // build the smartphone with the specs you want, using methods
 
     private String processorType;
     private int storageSize;
@@ -29,7 +29,7 @@ public class Smartphone implements GenericProduct {
     }
 
 
-    // on second thought... this i sprobably where i shoud have setup the write to csv...
+    // on second thought... this is probably where i should have setup the: write to csv...
 // to string instead of returning everything
     @Override
     public String toString() {

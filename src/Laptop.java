@@ -12,7 +12,9 @@ public class Laptop implements GenericProduct {
     //
     private int batterySize;
     private String graphicsCard;
-    ;
+
+    CSVFile csvFile;
+
 
     public Laptop(String processorType, int storageSize, int ramAmount, double screenSize, double width, double height, int batterySize, String graphicsCard) {
         this.processorType = processorType;
@@ -40,6 +42,8 @@ public class Laptop implements GenericProduct {
                 '}';
 
     }
+
+
 }
 
 

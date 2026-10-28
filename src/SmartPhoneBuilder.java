@@ -1,4 +1,4 @@
-public class SmartPhoneBuilder implements DeviceBuilder<Smartphone> {
+public class SmartPhoneBuilder implements DeviceBuilder<Smartphone, SmartPhoneBuilder> {
 
     private String processorType;
     private int storageSize;
@@ -22,35 +22,35 @@ public class SmartPhoneBuilder implements DeviceBuilder<Smartphone> {
      *
      */
     @Override           // Mobile devices usually have an arm based chip, like the newer 256 snapdragons
-    public DeviceBuilder<Smartphone> setProcessorType(String processorType) {
+    public SmartPhoneBuilder setProcessorType(String processorType) {
         this.processorType = processorType;
         return this; // amd or intel ONLY Bry-ccelerators not ready yet.
     }
     // mobile phones commonly have snapdragon, (ARM Based microprocessors)
 
     @Override
-    public DeviceBuilder<Smartphone> setStorageSize(int storageSize) {
+    public SmartPhoneBuilder setStorageSize(int storageSize) {
         this.storageSize = storageSize;
         return this;
     }
     // some multiple of 8
 
     @Override
-    public DeviceBuilder<Smartphone> setRamAmount(int ramAmount) {
+    public SmartPhoneBuilder setRamAmount(int ramAmount) {
         this.ramAmount = ramAmount;
         return this;
     }
 
     // screen size is actually measured from one corner to the other corner. fixes naming for width height.
     @Override
-    public DeviceBuilder<Smartphone> setScreenSize(double screenSize) {
+    public SmartPhoneBuilder setScreenSize(double screenSize) {
         this.screenSize = screenSize;
         return this;
     }
 
     // hopefully w x h won't be a problem
     @Override
-    public DeviceBuilder<Smartphone> setCameraResolution(double width, double height){
+    public SmartPhoneBuilder setCameraResolution(double width, double height){
         this.width = width;
         this.height = height;
         return this;
@@ -58,18 +58,18 @@ public class SmartPhoneBuilder implements DeviceBuilder<Smartphone> {
     // battery size default setting. (If Statement)
 
     @Override
-    public DeviceBuilder<Smartphone> setBatterySize(int batterySize){
+    public SmartPhoneBuilder setBatterySize(int batterySize){
         this.batterySize = batterySize;
         return this;
     }
     @Override
-    public DeviceBuilder<Smartphone> setCameraType(String cameraType){
+    public SmartPhoneBuilder setCameraType(String cameraType){
         this.cameraType = cameraType;
         // transfer from other file here
         return this;
     }
     @Override
-    public DeviceBuilder<Smartphone> setSimType(String simType){
+    public SmartPhoneBuilder setSimType(String simType){
         this.simType = simType;// sim or esim
         return this;
     }
@@ -82,7 +82,7 @@ public class SmartPhoneBuilder implements DeviceBuilder<Smartphone> {
 
 
     @Override
-    public DeviceBuilder<Smartphone> setGraphicsCard(String graphicsCard) {
+    public SmartPhoneBuilder setGraphicsCard(String graphicsCard) {
         return null;
     }
 
@@ -94,3 +94,6 @@ public class SmartPhoneBuilder implements DeviceBuilder<Smartphone> {
     }
     */
 }
+
+
+
