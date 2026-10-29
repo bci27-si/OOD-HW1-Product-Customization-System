@@ -54,8 +54,8 @@ public class LaptopBuilder implements DeviceBuilder<Laptop, LaptopBuilder> {
     }
 
     public LaptopBuilder setGraphicsCard(String graphicsCard) {
-        System.out.println("Available Cards: ");
-        System.out.println("graphicsCard: " + graphicsCard);
+        //System.out.println("Available Cards: ");
+        //System.out.println("graphicsCard: " + graphicsCard);
         this.graphicsCard = graphicsCard;
 
         return this;

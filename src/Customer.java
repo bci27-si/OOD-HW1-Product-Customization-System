@@ -9,32 +9,43 @@ public class Customer {
         System.out.println("|============================|");
         System.out.println("|     Welcome to NewEgg!     |"); // Essentially a MicroCenter
         System.out.println("|============================|");
+        //Both are Pc Parts stores. personally, never been to wither; only ordered from one.
 
         CSVFile file = new CSVFile();
         // create the file object
 
         DeviceDirector device = new DeviceDirector();
         System.out.println("--- Default Laptop ---");
-        //builderL.deviceBuild();
-        //device.constructLaptopA();
-        //device.toString();
+        file.readAll();
+        System.out.println("reading (Nothing if empty) 1 Test");
+
+        // .toString is here because it needs a string. not sure where the type is set, but works for now.
         file.writeFile(device.constructLaptopA().toString());
-        //file.readAll();
+        file.readAll();
+
+        System.out.println("read 2 Test");
 
         System.out.println("--- Default Smartphone ---");
         device.constructSmartphone();
 
         file.writeFile(device.constructSmartphone().toString());
+
+        //FIXME
+        // ADD SPACING FOR ALL THE COMPONENTS OF THE LAPTOP WHEN IT IS READ IN CSV!!!!
+
+
         // print out all components with corresponding names
 
         // printout everything in the file
+        System.out.println("read 3 Test");
         file.readAll();
 
         // adding the write file to return AND print the data to CSV
         //writeFile();
 
         //builderS.deviceBuild();
-
+    }
+}
 /*
         while (true) {
 
@@ -76,5 +87,3 @@ public class Customer {
                 break;
             }
             */
-    }
-}

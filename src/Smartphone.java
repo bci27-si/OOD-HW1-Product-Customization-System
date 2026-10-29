@@ -31,6 +31,7 @@ public class Smartphone implements GenericProduct {
 
     // on second thought... this is probably where i should have setup the: write to csv...
 // to string instead of returning everything
+
     @Override
     public String toString() {
         return "Smartphone{" +
@@ -45,4 +46,5 @@ public class Smartphone implements GenericProduct {
                 ", Sim Type='" + simType + '\'' +
                 '}';
     }
+
 }

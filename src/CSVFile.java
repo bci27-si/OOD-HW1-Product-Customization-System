@@ -4,13 +4,18 @@ import java.util.Arrays;
 
 public class CSVFile implements WorkFile{
 
-    // starting this over.
     private String fileName;
-    File file = new File(fileName);
+    //File file = new File(fileName);
 
     public CSVFile() {
         this.fileName = fileName + ".csv";
     }
+/*
+
+    public CSVFile(String fileName) {
+        this.fileName = fileName + ".csv";
+    }
+*/
 
     @Override
     public void checkFile() {
@@ -28,17 +33,13 @@ public class CSVFile implements WorkFile{
                 System.out.println(fileName + " is created");
             } catch (IOException e) {
                 System.out.println("CSV Error: " + e.getMessage() + "Method: checkFile();");
-                //e.getMessage();
             }
         } else {
             System.out.println(fileName + " already exists");
         }
     }
     // SaMpl CSV
-    //productName --- Processor --- RAM --- Storage --- Ingerated --- Operating Sys Price
-// cannot find the CSV stuff we were supposedly provided excet the example csv, i guess i have to make one anyway
-// safemode seems to not have
-
+    //productName --- Processor --- RAM --- Storage --- Integrated --- Operating Sys Price
     @Override
     public void writeFile(String columns) {
         // added check file just in case.
@@ -47,14 +48,14 @@ public class CSVFile implements WorkFile{
         try(BufferedWriter bw = new BufferedWriter(new FileWriter(fileName, true))){
             bw.write(String.join(",", columns));// pass in toString ?
             bw.newLine(); // next row
-
+        // might need to add a forloop to the join so it adds the amount of items in the right order to the csv
         }
         catch (IOException e) {
             System.out.println("CSV Error: " + e.getMessage() + "Method: newRow();");
         }
 
         catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println("CSV Error: " + e.getMessage());
         }
     }
 
@@ -63,11 +64,8 @@ public class CSVFile implements WorkFile{
     public void readAll(){
         // added file check just in case
         checkFile();
-        if(!file.exists()){
-            System.out.println("CSV Error: " + fileName + " doesn't exist");
-            return;
-        }
-        try (BufferedReader br = new BufferedReader(new FileReader(file))){
+
+        try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
             String line;
             while((line = br.readLine())!= null){
                 System.out.println(line);

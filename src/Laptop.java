@@ -9,12 +9,11 @@ public class Laptop implements GenericProduct {
     // width height of cam. probably not correct. lenses--> focal length and sensor size.
     private double width;
     private double height;
-    //
+
     private int batterySize;
     private String graphicsCard;
 
-    CSVFile csvFile;
-
+    //CSVFile csvFile;
 
     public Laptop(String processorType, int storageSize, int ramAmount, double screenSize, double width, double height, int batterySize, String graphicsCard) {
         this.processorType = processorType;
@@ -26,7 +25,6 @@ public class Laptop implements GenericProduct {
         this.batterySize = batterySize;
         this.graphicsCard = graphicsCard;
     }
-
 
     @Override
     public String toString() {
@@ -40,9 +38,7 @@ public class Laptop implements GenericProduct {
                 ", Battery Size=" + batterySize +
                 ", Graphics Card='" + graphicsCard + '\'' +
                 '}';
-
     }
-
 
 }
 
